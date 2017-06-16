@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<form action="https://securesandbox.webpay.by/" method="post">
+		<input type="hidden" name="*scart">
+		<input type="hidden" name="wsb_version" value="2">
+		<input type="hidden" name="wsb_language_id" value="russian">
+		<input type="hidden" name="wsb_storeid" value="985903506" >
+		<input type="hidden" name="wsb_store" value="Название Вашего магазина" >
+		<input type="hidden" name="wsb_order_num" value="ORDER-12345678" >
+		<input type="hidden" name="wsb_test" value="1" >
+		<input type="hidden" name="wsb_currency_id" value="BYN" >
+		<input type="hidden" name="wsb_seed" value="1242649174">
+		<input type="hidden" name="wsb_customer_name" value="Иванов Петр Петрович">
+		<input type="hidden" name="wsb_customer_address" value="Минск пр. Независимости д.1 кв.2">
+		<input type="hidden" name="wsb_service_date" value="Доставка до 1 января 2016 года">
+		<input type="hidden" name="wsb_email" value="no@body.tld" >
+		<input type="hidden" name="wsb_total">
+		<input type="hidden" name="wsb_signature">
+		<table cellpadding="3" style="text-align:right">
+			<tr>
+				<td>Название товара</td>
+				<td><input name="wsb_invoice_item_name[0]" required></td>
+			</tr>
+			<tr>
+				<td>Количество товара (целое число)</td>
+				<td><input name="wsb_invoice_item_quantity[0]" required></td>
+			</tr>
+			<tr>
+				<td>Стоимость единицы товара (в рублях)</td>
+				<td><input name="wsb_invoice_item_price[0]" required></td>
+			</tr>
+			<tr>
+				<td>Размер налога (в рублях)</td>
+				<td><input name="wsb_tax" required></td>
+			</tr>
+			<tr>
+				<td>Скидка на товар (в рублях)</td>
+				<td><input name="wsb_discount_price" required></td>
+			</tr>
+		</table>
+		<input id="buyButton" value="Купить" type="submit">
+	</form>
+	<script src="js/index.js"></script>
+</body>
+</html>
