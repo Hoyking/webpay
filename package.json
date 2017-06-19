@@ -15,8 +15,8 @@
   },
   "devDependencies": {
     "browser-sync": "^2.18.12",
-    "gulp-browserify": "^0.5.1",
     "gulp": "^3.9.1",
+    "gulp-browserify": "^0.5.1",
     "gulp-rigger": "^0.5.8",
     "gulp-sourcemaps": "^2.6.0",
     "gulp-uglify": "^3.0.0",

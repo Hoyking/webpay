@@ -2,10 +2,18 @@
 <html>
 <head>
 	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<style type="text/css">
+  	form {
+  		padding: 50px;
+  	}
+  </style>
 </head>
 <body>
-	<form action="https://securesandbox.webpay.by/" method="post">
+	<form class="form-horizontal" action="https://securesandbox.webpay.by/" method="post">
 		<input type="hidden" name="*scart">
 		<input type="hidden" name="wsb_version" value="2">
 		<input type="hidden" name="wsb_language_id" value="russian">
@@ -21,29 +29,41 @@
 		<input type="hidden" name="wsb_email" value="no@body.tld" >
 		<input type="hidden" name="wsb_total">
 		<input type="hidden" name="wsb_signature">
-		<table cellpadding="3" style="text-align:right">
-			<tr>
-				<td>Название товара</td>
-				<td><input name="wsb_invoice_item_name[0]" required></td>
-			</tr>
-			<tr>
-				<td>Количество товара (целое число)</td>
-				<td><input name="wsb_invoice_item_quantity[0]" required></td>
-			</tr>
-			<tr>
-				<td>Стоимость единицы товара (в рублях)</td>
-				<td><input name="wsb_invoice_item_price[0]" required></td>
-			</tr>
-			<tr>
-				<td>Размер налога (в рублях)</td>
-				<td><input name="wsb_tax" required></td>
-			</tr>
-			<tr>
-				<td>Скидка на товар (в рублях)</td>
-				<td><input name="wsb_discount_price" required></td>
-			</tr>
-		</table>
-		<input id="buyButton" value="Купить" type="submit">
+		<div class="form-group">
+	    <label class="control-label col-md-offset-3 col-md-3"><H5>Название товара:</H5></label>
+	    <div class="col-md-2">
+	      <input class="form-control" name="wsb_invoice_item_name[0]" required>
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <label class="control-label col-md-offset-3 col-md-3"><H5>Количество товара:</H5></label>
+	    <div class="col-md-2">
+	      <input class="form-control" name="wsb_invoice_item_quantity[0]" required>
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <label class="control-label col-md-offset-3 col-md-3"><H5>Стоимость единицы товара:</H5></label>
+	    <div class="col-md-2">
+	      <input class="form-control" name="wsb_invoice_item_price[0]" required>
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <label class="control-label col-md-offset-3 col-md-3"><H5>Размер налога:</H5></label>
+	    <div class="col-md-2">
+	      <input class="form-control" name="wsb_tax" required>
+	    </div>
+	  </div>
+	  <div class="form-group">
+	    <label class="control-label col-md-offset-3 col-md-3"><H5>Скидка на товар:</H5></label>
+	    <div class="col-md-2">
+	      <input class="form-control" name="wsb_discount_price" required>
+	    </div>
+	  </div>
+	  <div class="form-group">        
+      <div class="col-md-offset-6 col-md-1">
+        <input type="submit" class="btn btn-primary" id="buyButton" value="Купить">
+      </div>
+    </div>
 	</form>
 	<script src="js/index.js"></script>
 </body>
